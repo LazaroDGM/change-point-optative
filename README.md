@@ -6,7 +6,7 @@ Change Point Optative Project
 - [Alejandra Monzón Peña](https://github.com/Alejandra1113)  
   [amonzon1113@gmail.com](mailto:amonzon1113@gmail.com)
 - [Leonardo Ulloa Ferrer](https://github.com/Leo00010011)  
-    [correo del chino](mailto:)
+    [ulloaferrerleonardo@gmail.com](mailto:ulloaferrerleonardo@gmail.com)
 
 # Question 1
 
