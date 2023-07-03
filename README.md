@@ -14,7 +14,7 @@ Simulate a time series with $n = 500$ realisations distributed according to a pr
 
 ## Answer 1
 
-We choose an Exponential distribution for the time series simulation, the code below shows the function `expovariate`, which create functions that generates random values of exponential distibution with parameter $ \lambda = l$. 
+We choose an Exponential distribution for the time series simulation, the code below shows the function `expovariate`, which create functions that generates random values of exponential distibution with parameter $\lambda = l$. 
 
 Now let's generate a time serie on time interval $[0; 500]$, and let's add 3 change points on $200$, $250$ and $350$, for that we generate random exponentialy distributed values, using the previously defined functions exp_1, exp2 adn exp_3, getting $4$ intervals $[0; 200)$, $[200,250)$, $[250;350)$ and $[350,500]$ with values coresponding to exponential distributions with $\lambda = 1,5,1,4$ respectively using `generate_time_series` function. Finally we plot the resulting time series and the real change points moments with `plot_time_series` function.
 
@@ -92,7 +92,7 @@ For `PELT` algorithm implementation, we base our implementation on Conference's 
 
 <!-- A continuación se hace una implementación del algoritmo `PELT`. Nos basamos tanto en la implementación de Conferencia como la explicada en el artículo **"Killick, R., Fearnhead, P., & Eckley, I. A. (2012, oct). Optimal detection of changepoints with a linear computational cost. Journal of the American Statistical Association"**. Es importante señalar que PELT hace uso del **Teorema 3.1** de este artículo para descarta posibles puntos de cambios. Este Teorema expresa lo siguiente: -->
 
-*Theorem 3.1*: We assume that when introducing a changepoint into a sequence of observations, the cost, $C$, of the sequence reduces. More formally, we assume there exists a constant $K$ such that for all $t < s <T$.
+*Theorem 3.1*: We assume that when introducing a changepoint into a sequence of observations, the cost, $C$, of the sequence reduces. More formally, we assume there exists a constant $K$ such that for all $t\lt s \lt T$.
 
 Then pseudo-code of our algorithm looks like:
 <!-- Luego el pseudocódigo de nuestro algoritmo sería: -->
@@ -113,10 +113,10 @@ Then pseudo-code of our algorithm looks like:
 
 - **for all** $t^* = n_{min},..., n-1$:  
     - $F[\widetilde{ t }] = \min_{t \in R  ~ \backslash ~ |\widetilde{ t }-t| \ge n_{min} }\{F(t) + c(y_{t:\widetilde{ t }})+ \beta\}$
-    - $\overline{t} = \argmin_{t \in R  ~ \backslash ~ |\widetilde{ t }-t| \ge n_{min} }\{F(t) + c(y_{t:\widetilde{ t }-1})+ \beta\}$
-    - $ CP[\widetilde{ t }] = \overline{t} $
-    - $ R^* = \{ \widetilde{ t } \} \cup \{ t \in R ~ \backslash ~ F[t] + c(y_{t:\widetilde{ t }-1}) + K < F[\widetilde{ t }]\} $
-    - $ R = R^*$
+    - $\overline{t} = argmin_{t \in R  ~ \backslash ~ |\widetilde{ t }-t| \ge n_{min} }\{F(t) + c(y_{t:\widetilde{ t }-1})+ \beta\}$
+    - $CP[\widetilde{ t }] = \overline{t}$
+    - $R^* = \{ \widetilde{ t } \} \cup \{ t \in R ~ \backslash ~ F[t] + c(y_{t:\widetilde{ t }-1}) + K < F[\widetilde{ t }]\}$
+    - $R = R^*$
 - **end for**
 - `last = CP[n-1]`
 - **while** `last != 0` :
