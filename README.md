@@ -4,7 +4,7 @@ Change Point Optative Project
 - [Lázaro Daniel González Martínez](https://github.com/LazaroDGM)  
     [lazarodaniel.glezmtnz@gmail.com](mailto:lazarodaniel.glezmtnz@gmail.com)
 - [Alejandra Monzón Peña](https://github.com/Alejandra1113)  
-    [correo de ale](mailto:)
+  [amonzon1113@gmail.com](mailto:amonzon1113@gmail.com)
 - [Leonardo Ulloa Ferrer](https://github.com/Leo00010011)  
     [correo del chino](mailto:)
 
